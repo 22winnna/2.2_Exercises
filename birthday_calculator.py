@@ -8,7 +8,7 @@ def main():
         #welcome message
         print("Birthday Calculator")
         print()
-
+  after_bday = tday.day - bday.day
         y = input("Enter Name:")
         x = input("Enter birthday (MM/DD/YY):")
 
@@ -35,7 +35,7 @@ def main():
         if temp_bday > tday:
             print(y, "'s birthday is in", until_bday.days * 1, "days.")
         elif temp_bday < tday:
-            if until_bday == 0:
+            if until_bday.days == 0:
                 print(y, "'s birthday is today!")
             else:
                 print(y, "'s birthday was", until_bday.days, "days ago.") 
