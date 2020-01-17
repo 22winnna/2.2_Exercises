@@ -33,8 +33,10 @@ def main():
         temp_bday = datetime(2020, bday.month, bday.day)
         until_bday = tday.day - bday.day
         if temp_bday > tday:
+            print(y, "is", age - 1, "years old.")            
             print(y, "'s birthday is in", until_bday.days * 1, "days.")
         elif temp_bday < tday:
+            print(y, "is", age, "years old.")
             if until_bday.days == 0:
                 print(y, "'s birthday is today!")
             else:
