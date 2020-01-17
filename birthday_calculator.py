@@ -30,11 +30,16 @@ def main():
 
         age = tday.year - bday.year
         print(y, "is", age, "years old.")
+        temp_bday = datetime(2020, bday.month, bday.day)
         until_bday = tday.day - bday.day
-        if tday.day > bday.day:
+        after_bday = tday.day - bday.day
+        if temp_bday > tday:
             print(y, "'s birthday is in", until_bday, "days.")
-        else:
-            print(y, "'s birthday is today!")
+        elif temp_bday < tday:
+            if after_bday == 0:
+                print(y, "'s birthday is today!")
+            else:
+                print(y, "'s birthday was", after_bday, "days ago.") 
 
         choice = input("Continue (y/n): ")
 
